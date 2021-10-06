@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html> 
+<style> 
+    body {
+        font-family: sans-serif;
+        padding: 20px;
+        background-image: url("image/backgound.jpg");
+        background-size: cover;
+        }
+    form { 
+        width: 320px;
+        height: 420px;
+		margin: 20px auto;
+		padding: 15px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+		border: 1px solid #c4c4c4;
+        border-radius: 10px;
+       
+    }   
+    h2{
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 22px;
+			}
+    input[type=text], 
+    input[type=password] { 
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    } 
+    button { 
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 100px;
+        background: #1c8adb;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 40px;
+        
+    } 
+    /* Avatar image */
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    button:hover { 
+        opacity: 0.8; 
+    } 
+    .imgcontainer { 
+        text-align: center; 
+        margin: 24px 0 12px 0; 
+    }  
+    .container { 
+        padding: 16px; 
+    } 
+    .submit-box{
+        text-align: center;
+    }
+    .show{
+        font-size: 14px;
+        padding: 0 0 20px;
+        margin: 20px;
+        text-align: right;
+        font-weight: lighter;
+    }
+    
+</style> 
+<script>
+    function myFunction() {
+      var x = document.getElementById("Password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+    </script>
+<body> 
+    
+        <div class="container"> 
+        <form name="login-form"
+          action="http://127.0.0.1:8000/info.html" method="post" >
+          <div class="imgcontainer" data-aos="fade-up">
+            <img src="image/avatar.jpg" alt="Avatar" class="avatar">
+            <h2>Login Form</h2> 
+          </div>
+            <div class="input-box">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" id="Username" name="Username" placeholder="Enter Username"><br><br>
+            </div>
+            <div class="input-box">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" id="Password" name="Password" placeholder="Enter Password"><br><br>
+            </div>
+            <div class="submit-box">
+            <button type="submit">Login</button> 
+            <div class="show">
+                <input type="checkbox" onclick="myFunction()">Show Password
+            </div>
+        </form>
+        </div> 
+        
+</body> 
+  
+</html> 
